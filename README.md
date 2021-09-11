@@ -6,3 +6,4 @@
 - Five `Fibonacci sequence` codes pair-wise comparison
 
 ### Visualization
+![image](example/A_B.bmp)
