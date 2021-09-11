@@ -1,0 +1,17 @@
+#import<cstdio>
+#import<map>
+#define x long long
+std::map<x,x> q;
+x n,s=1e8+7,k=1;
+x f(x n){
+x p=n/2;
+if(n<2) return 1;
+if(!q[n]){if(n%2) q[n]=(f(p)*(f(p-1)+f(p+1)))%s;
+else q[n]=(f(p)*f(p)+f(p-1)*f(p-1))%s;
+}
+return q[n];
+}
+main(){
+scanf("%lld",&n);
+printf("%lld",f(n));
+}

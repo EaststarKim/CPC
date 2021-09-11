@@ -1,0 +1,91 @@
+A
+
+A and B
+Edit Dis : 250.240000
+40.8%
+
+A and C
+Edit Dis : 277.200000
+34.5%
+
+A and D
+Edit Dis : 288.240000
+42.8%
+
+A and E
+Edit Dis : 230.260000
+45.6%
+
+B
+
+B and A
+Edit Dis : 250.240000
+40.8%
+
+B and C
+Edit Dis : 118.050000
+48.9%
+
+B and D
+Edit Dis : 344.170000
+31.7%
+
+B and E
+Edit Dis : 198.190000
+41.4%
+
+C
+
+C and A
+Edit Dis : 277.200000
+34.5%
+
+C and B
+Edit Dis : 118.050000
+48.9%
+
+C and D
+Edit Dis : 357.160000
+29.1%
+
+C and E
+Edit Dis : 202.180000
+40.2%
+
+D
+
+D and A
+Edit Dis : 288.240000
+42.8%
+
+D and B
+Edit Dis : 344.170000
+31.7%
+
+D and C
+Edit Dis : 357.160000
+29.1%
+
+D and E
+Edit Dis : 253.180000
+49.8%
+
+E
+
+E and A
+Edit Dis : 230.260000
+45.6%
+
+E and B
+Edit Dis : 198.190000
+41.4%
+
+E and C
+Edit Dis : 202.180000
+40.2%
+
+E and D
+Edit Dis : 253.180000
+49.8%
+
+average : 40.5%

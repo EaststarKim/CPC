@@ -1,0 +1,45 @@
+#include<stdio.h>  
+long long a[40][2][2],b[2][2],c[2][2];  
+int main()  
+{  
+    long long M=1e8+7;  
+    long long n;  
+    int i,j,k,t;  
+    a[0][0][0]=1;  
+    a[0][1][0]=1;  
+    a[0][0][1]=1;  
+    b[0][0]=1;  
+    b[1][1]=1;  
+    for(t=1;t<=34;t++){  
+        for(i=0;i<2;i++){  
+            for(j=0;j<2;j++){  
+                for(k=0;k<2;k++){  
+                    a[t][i][j]+=a[t-1][k][j]*a[t-1][i][k];  
+                    a[t][i][j]%=M;  
+                    if(a[i][j][t]<0)a[t][i][j]+=M;  
+                }  
+            }  
+        }  
+    }  
+    scanf("%lld",&n);  
+    for(t=0;t<=34;t++){  
+        if(n%2==1){  
+            for(i=0;i<2;i++){  
+                for(j=0;j<2;j++){  
+                        c[i][j]=0;  
+                    for(k=0;k<2;k++){  
+                        c[i][j]+=b[k][j]*a[t][i][k];  
+                        c[i][j]%=M;  
+                        if(c[i][j]<0)c[i][j]+=M;  
+                    }  
+                }  
+            }  
+            b[0][0]=c[0][0];  
+            b[0][1]=c[0][1];  
+            b[1][0]=c[1][0];  
+            b[1][1]=c[1][1];  
+        }  
+        n/=2;  
+    }  
+    printf("%lld",b[0][0]);  
+}

@@ -1,0 +1,46 @@
+#include <stdio.h>
+struct hang
+{
+	long long a,b,c,d;
+	hang() { a=b=c=d=0; }
+	hang ( long long x, long long y, long long z, long long w ) { a=x, b=y, c=z, d=w; }
+	hang operator*(hang x)
+	{
+		return (hang){ (a*x.a+b*x.c)%100000007,(a*x.b+b*x.d)%100000007,(c*x.a+d*x.c)%100000007,(c*x.b+d*x.d)%100000007 };
+	}
+} H[10000001];
+hang pow(hang,long long);
+int main()
+{
+	hang h1(0,1,1,1);
+	long long n;
+	scanf("%lld",&n);
+	printf("%lld",pow(h1,n).d);
+}
+hang pow(hang h,long long n)
+{
+	if(n>10000000)
+	{
+		if(n%2) return pow(h,n/2)*pow(h,n/2)*h;
+		else return pow(h,n/2)*pow(h,n/2);
+	}
+	else
+	{
+		if(!(H[n].a==0 && H[n].b==0 && H[n].c==0 && H[n].d==0)) return H[n];
+		else if(n==1)
+		{
+			H[1]=h;
+			return H[1];
+		}
+		else if(n%2)
+		{
+			H[n]=pow(h,n/2)*pow(h,n/2)*h;
+			return H[n];
+		}
+		else
+		{
+			H[n]=pow(h,n/2)*pow(h,n/2);
+			return H[n];
+		}
+	}
+}
