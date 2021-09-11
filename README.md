@@ -1,6 +1,6 @@
 # CPC
 - [2015] GSHS R&E with *wookladin*
-- Code Plagiarism Checker
+- (very simple) Code Plagiarism Checker
 
 ### Example
 - Five `Fibonacci sequence` codes pair-wise comparison
